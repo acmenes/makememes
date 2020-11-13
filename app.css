@@ -32,6 +32,7 @@ p {
 #meme {
     margin-top: 20px; 
     position: relative;
+    size: 50%;
 }
 
 input[type=text], input[type=url] {
@@ -62,4 +63,10 @@ input[type=submit] {
   img {
       /* position: relative; */
       z-index: -1;
+  }
+
+  button {
+      margin: 10px;
+      background-color: #EC7063;
+      color: white;
   }

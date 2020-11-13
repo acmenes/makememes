@@ -22,6 +22,9 @@ submit.addEventListener("click", function(e){
     const memePic = document.createElement("img")
     memePic.setAttribute('src', `${imgInput.value}`)
 
+    const remove = document.createElement("button");
+    remove.innerText = "Remove";
+
     // console.log(topText)
     // console.log(bottomText)
     // console.log(`${imgInput.value}`)
@@ -29,24 +32,14 @@ submit.addEventListener("click", function(e){
     imgDiv.appendChild(memePic)
     imgDiv.appendChild(topText)
     imgDiv.appendChild(bottomText)
+    imgDiv.appendChild(remove)
+
 })
 
-// function createTopText(text) {
-//     const top = document.createElement("p")
-//     top.innerText = text;
-//     console.log(top)
-//     // memePic.appendChild(top)
-//     return top;
-// }
+//i need to figure out a way to remove the pic that also removes the text
 
-// function createBottomText(text) {
-//     const bottom = document.createElement("p")
-//     bottom.innerText = text;
-//     // memePic.appendChild(bottom)
-//     return bottom;
-// }
-
-// function createImage(text){
-//     const memePic = document.createElement("img")
-//     memePic.setAttribute('src', imgInput)
-// }
+imgDiv.addEventListener("click", function(e){
+    if(e.target.tagName === "BUTTON"){
+        e.target.parentElement.remove();
+    }
+})
